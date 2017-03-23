@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Especies</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar
+    [(ngModel)]="buscadorEspecies"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="getEspecies($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+
+  <!-- Slide de especies -->
+  <ion-slides >
+    <ion-slide *ngFor="let especie of especies">
+      <h2 [innerHTML]="especie.titulo"></h2>
+      <img [src]="especie.imagen"/>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
