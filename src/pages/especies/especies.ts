@@ -44,10 +44,10 @@ export class EspeciesPage {
     // if the value is an empty string don't filter the items
     if (val && val.trim() != '') {
 
-      /*
+
       this.especies = this.especies.titulo.filter((item) => {
         return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
-      })*/
+      })
     }
   }
 
